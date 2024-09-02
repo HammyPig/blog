@@ -16,12 +16,12 @@ jobs:
         run: pip install -r ./.devcontainer/requirements.txt
 
       - name: Make static files
-        run: make html
+        run: sphinx-build -M dirhtml ./source ./build
 
       - name: Package and upload artifact of static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build/html
+          path: ./build/dirhtml
 
   deploy:
     runs-on: ubuntu-latest
