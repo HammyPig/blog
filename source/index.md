@@ -1,3 +1,7 @@
+---
+sd_hide_title: true
+---
+
 # James Walden
 
 Hello and welcome to my website!
