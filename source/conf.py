@@ -3,6 +3,8 @@ myst_enable_extensions = ["colon_fence"]
 
 templates_path = ["_templates"]
 
+html_title = "James Walden"
+
 html_theme = "pydata_sphinx_theme"
 
 html_theme_options = {
