@@ -11,7 +11,7 @@ html_theme_options = {
     "navbar_end": ["navbar-icon-links"],
 
     "logo": {
-        "text": "Title",
+        "text": "James Walden",
         "image_light": "_images/example.png"
     },
     
@@ -33,7 +33,7 @@ html_theme_options = {
 
 html_context = {
    "default_mode": "light",
-   "footer_text": "Made with love by James."
+   "footer_text": "Made with love by James Walden."
 }
 
 sd_custom_directives = {
