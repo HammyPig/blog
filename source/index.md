@@ -13,7 +13,7 @@ Having it accessible to others means that we can learn from each other in our co
 
 With all that being said, please feel free to browse my posts found below. Thank you for visiting :)
 
-## Links
+## Posts
 
 ::::{card-grid}
 ::::
