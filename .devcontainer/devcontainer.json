@@ -3,5 +3,12 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": ["ms-toolsai.jupyter"]
+		}
+	},
+	
 	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && sphinx-autobuild -a -b dirhtml source build"
 }
