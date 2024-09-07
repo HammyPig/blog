@@ -15,5 +15,5 @@ Head to `Settings > Pages` and change `Deploy from a branch` to `GitHub Actions`
 Then, clone the repository as you normally would.
 
 :::{dropdown} Optional content: How this template was made
-If you are interested, you can check out how I created this template in the [setup documentation](www.poo.com).
+If you are interested, you can check out how I created this template in the [setup documentation](/website-template-log/overview).
 :::
