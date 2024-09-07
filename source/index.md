@@ -34,6 +34,16 @@ Learn how to create a website exactly like this one.
 Logs the development of the website template I created.
 :::
 
+:::{grid-item-card} {fas}`book` Webscraping Notes
+:link: general/web-scraping
+Quick and informal guide on webscraping.
+:::
+
+:::{grid-item-card} {far}`lightbulb` Chasing Summers
+:link: general/city-climates
+An exploration of living in perpetual summer.
+:::
+
 ::::
 
 <!-- Do not delete this as it will break section navigation otherwise -->
