@@ -28,6 +28,12 @@ With all that being said, please feel free to browse my posts found below. Thank
 Learn how to create a website exactly like this one.
 :::
 
+:::{grid-item-card} {fas}`book` Website Template Log
+:link: website-template-log/overview
+
+Logs the development of the website template I created.
+:::
+
 ::::
 
 <!-- Do not delete this as it will break section navigation otherwise -->
