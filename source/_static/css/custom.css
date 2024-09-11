@@ -1,0 +1,4 @@
+.plotly-graph-div.js-plotly-plot {
+    height: unset !important;
+    aspect-ratio: 1.7;
+}
