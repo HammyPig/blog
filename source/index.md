@@ -44,6 +44,16 @@ Quick and informal guide on webscraping.
 An exploration of living in perpetual summer.
 :::
 
+:::{grid-item-card} {fab}`python` Quest Notes
+:link: notes/jupyter
+In search of a Jupyter Notebook alternative.
+:::
+
+:::{grid-item-card} {fab}`docker` Dev Container Notes
+:link: notes/dev-containers
+Quick and informal guide on dev containers.
+:::
+
 ::::
 
 <!-- Do not delete this as it will break section navigation otherwise -->
