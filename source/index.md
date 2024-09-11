@@ -35,7 +35,7 @@ Logs the development of the website template I created.
 :::
 
 :::{grid-item-card} {fas}`book` Webscraping Notes
-:link: general/web-scraping
+:link: notes/web-scraping
 Quick and informal guide on webscraping.
 :::
 
