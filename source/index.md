@@ -54,6 +54,34 @@ In search of a Jupyter Notebook alternative.
 Quick and informal guide on dev containers.
 :::
 
+:::{grid-item-card} {fas}`comment` Ikea Desk
+:link: posts/ikea-desk
+:::
+
+:::{grid-item-card} {far}`lightbulb` Investing
+:link: posts/investing
+:::
+
+:::{grid-item-card} {far}`lightbulb` Retirement
+:link: posts/retirement
+:::
+
+:::{grid-item-card} {far}`lightbulb` Until Infinite
+:link: posts/until-infinite
+:::
+
+:::{grid-item-card} {far}`lightbulb` Turning Chance Into Certainty
+:link: posts/chance
+:::
+
+:::{grid-item-card} {far}`lightbulb` A Stellaris Strategy
+:link: posts/stellaris
+:::
+
+:::{grid-item-card} {far}`lightbulb` Investment Retirement Timeline
+:link: posts/retirement-timeline
+:::
+
 ::::
 
 <!-- Do not delete this as it will break section navigation otherwise -->
