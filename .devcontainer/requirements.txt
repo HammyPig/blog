@@ -4,6 +4,8 @@ pydata-sphinx-theme == 0.*
 sphinx-design == 0.*
 sphinx-copybutton == 0.*
 sphinx-autobuild
+jupyterlab
+jupytext
 numpy
 pandas
 matplotlib
