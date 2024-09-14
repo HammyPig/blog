@@ -21,6 +21,7 @@ With all that being said, please feel free to browse my posts found below. Thank
 ## Posts
 
 :::{post-grid}
+:::
 
 <!-- Do not delete this as it will break section navigation otherwise -->
 :::{include} _sections.md
