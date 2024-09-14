@@ -1,6 +1,6 @@
 :::{toctree}
 :hidden:
 
-website-tutorial/_toc
-website-template-log/_toc
+posts/website-tutorial/_toc
+posts/website-template-log/_toc
 :::
