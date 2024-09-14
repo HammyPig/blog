@@ -1,5 +1,8 @@
-extensions = ["myst_nb", "sphinx_design", "sphinx_copybutton"]
-myst_enable_extensions = ["colon_fence"]
+import sys, os
+
+sys.path.append(os.path.abspath("./_ext"))
+
+extensions = ["myst_nb", "sphinx_design", "sphinx_copybutton", "sphinxbook"]
 
 templates_path = ["_templates"]
 
