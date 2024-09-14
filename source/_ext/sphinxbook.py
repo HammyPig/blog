@@ -10,7 +10,7 @@ class PostGridDirective(GridDirective):
             self.title = "Untitled Post"
             self.desc = ""
 
-    def get_post_metadata(self, file_path):
+    def get_post_metadata(file_path):
         post = frontmatter.load(file_path)
         post_metadata = PostGridDirective.PostMetadata()
 
