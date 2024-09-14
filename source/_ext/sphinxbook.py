@@ -66,7 +66,7 @@ class PostGridDirective(GridDirective):
             if post_metadata.icon != None:
                 display_title = post_metadata.icon + " " + display_title
 
-            self.content = [
+            self.content += [
                 f":::{{grid-item-card}} {display_title}",
                 f":link: {display_link}",
                 "",
