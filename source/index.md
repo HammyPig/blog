@@ -20,69 +20,7 @@ With all that being said, please feel free to browse my posts found below. Thank
 
 ## Posts
 
-::::{card-grid}
-
-:::{grid-item-card} {material-regular}`web` Website Tutorial
-:link: website-tutorial/overview
-
-Learn how to create a website exactly like this one.
-:::
-
-:::{grid-item-card} {fas}`book` Website Template Log
-:link: website-template-log/overview
-
-Logs the development of the website template I created.
-:::
-
-:::{grid-item-card} {fas}`book` Webscraping Notes
-:link: notes/web-scraping
-Quick and informal guide on webscraping.
-:::
-
-:::{grid-item-card} {far}`lightbulb` Chasing Summers
-:link: general/city-climates
-An exploration of living in perpetual summer.
-:::
-
-:::{grid-item-card} {fab}`python` Quest Notes
-:link: notes/jupyter
-In search of a Jupyter Notebook alternative.
-:::
-
-:::{grid-item-card} {fab}`docker` Dev Container Notes
-:link: notes/dev-containers
-Quick and informal guide on dev containers.
-:::
-
-:::{grid-item-card} {fas}`comment` Ikea Desk
-:link: posts/ikea-desk
-:::
-
-:::{grid-item-card} {far}`lightbulb` Investing
-:link: posts/investing
-:::
-
-:::{grid-item-card} {far}`lightbulb` Retirement
-:link: posts/retirement
-:::
-
-:::{grid-item-card} {far}`lightbulb` Until Infinite
-:link: posts/until-infinite
-:::
-
-:::{grid-item-card} {far}`lightbulb` Turning Chance Into Certainty
-:link: posts/chance
-:::
-
-:::{grid-item-card} {far}`lightbulb` A Stellaris Strategy
-:link: posts/stellaris
-:::
-
-:::{grid-item-card} {far}`lightbulb` Investment Retirement Timeline
-:link: posts/retirement-timeline
-:::
-
-::::
+:::{post-grid}
 
 <!-- Do not delete this as it will break section navigation otherwise -->
 :::{include} _sections.md
