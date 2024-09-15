@@ -3,7 +3,7 @@ import sys, os
 sys.path.append(os.path.abspath("./_ext"))
 
 extensions = ["myst_nb", "sphinx_design", "sphinx_copybutton", "sphinxbook"]
-myst_enable_extensions = ["colon_fence"]
+myst_enable_extensions = ["strikethrough", "colon_fence"]
 
 templates_path = ["_templates"]
 
