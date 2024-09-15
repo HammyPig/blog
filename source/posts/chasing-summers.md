@@ -135,6 +135,18 @@ for city in cities_of_interest:
 display(Markdown(markdown))
 ```
 
+After being traumatised by Melbourne's perpetual winters, the next questions became obvious: how warm and sunny are these cities?
+
+## Monthly temperature of different cities
+
+Let's first start with temperature. I found online that the ideal temperature for humans to live in is between 20°C and 25°C, otherwise known by its fancy term: the 'thermalneutral' zone.[^ideal-temperature]
+
+[^ideal-temperature]: http://www.atmo.arizona.edu/students/courselinks/fall12/atmo336/lectures/sec1/comfort.html
+
+Because of my summer bias, however, I opted to extend this 'optimal' range all the way to 30°C.
+
+Below I then graphed out the monthly temperatures of our candidate cities, with our warm 20°C to 30°C goldilocks zone highlighted in green.
+
 ```{code-cell} ipython3
 :tags: [remove-input]
 
