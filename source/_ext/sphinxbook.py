@@ -1,6 +1,5 @@
 import os
 import re
-import json
 from datetime import datetime
 import frontmatter
 from docutils.parsers.rst import directives
@@ -27,7 +26,7 @@ class PostGridDirective(GridDirective):
         post_metadata = PostGridDirective.PostMetadata()
 
         if "tags" in post.metadata:
-            post_metadata.tags = post.metadata["tags"]
+            post_metadata.tags = [x.strip() for x in post.metadata["tags"]]
 
         if "title" in post.metadata:
             post_metadata.title = post.metadata["title"]
@@ -113,8 +112,8 @@ class PostGridDirective(GridDirective):
         if "tags" not in self.options:
             self.tags_filter = []
         else:
-            self.tags_filter = json.loads(self.options["tags"])
-            
+            self.tags_filter = [x.strip() for x in self.options["tags"]]
+
         if "sort" not in self.options:
             self.sort_by = None
         else:
@@ -141,7 +140,7 @@ class PostGridDirective(GridDirective):
         source_dir = self.state.document.settings.env.srcdir
         posts_dir = os.path.join(source_dir, "posts/")
         post_metadata_list = []
-        
+
         for file in os.listdir(posts_dir):
             file_path = os.path.join(posts_dir, file)
 
