@@ -15,6 +15,7 @@ class PostGridDirective(GridDirective):
             self.tags = []
             self.icon = None
             self.title = "Untitled Post"
+            self.date = datetime.min
             self.desc = ""
             self.link = ""
 
@@ -31,6 +32,9 @@ class PostGridDirective(GridDirective):
             match = re.search(r"^# (.+)", post.content, re.MULTILINE)
             if match:
                 post_metadata.title = match.group(1)
+
+        if "date" in post.metadata:
+            post_metadata.date = datetime.strptime(post.metadata["date"], "%Y-%m-%d")
 
         if "desc" in post.metadata:
             post_metadata.desc = post.metadata["desc"]
