@@ -5,10 +5,12 @@ from datetime import datetime
 import frontmatter
 from docutils.parsers.rst import directives
 from sphinx_design.grids import GridDirective
+from operator import attrgetter
 
 class PostGridDirective(GridDirective):
     option_spec = dict(GridDirective.option_spec, **{
-        "tags": directives.unchanged
+        "tags": directives.unchanged,
+        "sort": str
     })
 
     class PostMetadata:
@@ -65,14 +67,7 @@ class PostGridDirective(GridDirective):
         
         return folder_contains_toc_file
     
-    def add_post_to_grid(self, file_path):
-        post_metadata = self.get_post_metadata(file_path)
-
-        if self.tags_filter != []:
-            post_contains_at_least_one_tag = bool(set(self.tags_filter) & set(post_metadata.tags))
-            if not post_contains_at_least_one_tag:
-                return
-
+    def add_post_metadata_to_grid(self, post_metadata):
         display_title = post_metadata.title
         if len(display_title) > 53:
             display_title = display_title[:50].strip() + "..."
@@ -92,7 +87,7 @@ class PostGridDirective(GridDirective):
             ":::"
         ]
 
-    def add_section_to_grid(self, folder_path):
+    def get_section_metadata(self, folder_path):
         toc_file_path = os.path.join(folder_path, "_toc.md")
         section_opening_filename = None
 
@@ -109,28 +104,69 @@ class PostGridDirective(GridDirective):
             return
         
         section_opening_file_path = os.path.join(folder_path, section_opening_filename)
-        self.add_post_to_grid(section_opening_file_path)
+        section_metadata = self.get_post_metadata(section_opening_file_path)
+        
+        return section_metadata
     
     def run(self):
+        # get directive options
         if "tags" not in self.options:
             self.tags_filter = []
         else:
             self.tags_filter = json.loads(self.options["tags"])
             
-        # add pages and sections from posts folder
-        self.posts_folder = "posts/"
-        self.content = []
+        if "sort" not in self.options:
+            self.sort_by = None
+        else:
+            sort_options = self.options["sort"]
+            
+            # shortcuts
+            if sort_options == "newest":
+                sort_options = "date desc"
+            elif sort_options == "oldest":
+                sort_options = "date asc"
+            
+            sort_options = sort_options.split(" ")
+            self.sort_by = sort_options[0]
 
+            if len(sort_options) == 1:
+                if self.sort_by == "title":
+                    self.sort_order = "asc"
+                elif self.sort_by == "date":
+                    self.sort_order = "desc"
+            else:
+                self.sort_order = sort_options[1]
+
+        # get all post metadata
         source_dir = self.state.document.settings.env.srcdir
-        posts_dir = os.path.join(source_dir, self.posts_folder)
+        posts_dir = os.path.join(source_dir, "posts/")
+        post_metadata_list = []
         
         for file in os.listdir(posts_dir):
             file_path = os.path.join(posts_dir, file)
 
             if PostGridDirective.is_post(file_path):
-                self.add_post_to_grid(file_path)
+                post_metadata = self.get_post_metadata(file_path)
             elif PostGridDirective.is_section_folder(file_path):
-                self.add_section_to_grid(file_path)
+                post_metadata = self.get_section_metadata(file_path)
+
+            post_metadata_list.append(post_metadata)
+
+        # sort post metadata
+        if self.sort_by != None:
+            post_metadata_list = sorted(post_metadata_list, key=attrgetter(self.sort_by), reverse=(self.sort_order == "desc"))
+
+        # add post metadata to content
+        self.content = []
+
+        for post_metadata in post_metadata_list:
+            if self.tags_filter != []:
+                post_contains_at_least_one_tag = bool(set(self.tags_filter) & set(post_metadata.tags))
+                
+                if not post_contains_at_least_one_tag:
+                    continue
+
+            self.add_post_metadata_to_grid(post_metadata)
 
         # set default settings for grid directive
         self.arguments = ["1 2 2 3"]
