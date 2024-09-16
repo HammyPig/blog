@@ -9,8 +9,9 @@ class PostGridDirective(GridDirective):
             self.icon = None
             self.title = "Untitled Post"
             self.desc = ""
+            self.link = ""
 
-    def get_post_metadata(file_path):
+    def get_post_metadata(self, file_path):
         post = frontmatter.load(file_path)
         post_metadata = PostGridDirective.PostMetadata()
 
@@ -31,40 +32,47 @@ class PostGridDirective(GridDirective):
 
         if "icon" in post.metadata:
             post_metadata.icon = post.metadata["icon"]
+        
+        source_dir = self.state.document.settings.env.srcdir
+        post_metadata.link = os.path.relpath(file_path, source_dir)
+        post_metadata.link = post_metadata.link.removesuffix(".md")
 
         return post_metadata
     
-    def add_post_to_grid(self, file_path, section_folder=None):
-        post_metadata = PostGridDirective.get_post_metadata(file_path)
+    def is_post(file_path):
+        return file_path.endswith(".md")
+    
+    def is_section_folder(file_path):
+        if not os.path.isdir(file_path):
+            return False
+        
+        folder_contains_toc_file = os.path.isfile(os.path.join(file_path, "_toc.md"))
+        
+        return folder_contains_toc_file
+    
+    def add_post_to_grid(self, file_path):
+        post_metadata = self.get_post_metadata(file_path)
 
         display_title = post_metadata.title
-        display_desc = post_metadata.desc
-
-        if section_folder == None:
-            display_link = os.path.join(self.posts_folder, os.path.basename(file_path))
-        else:
-            display_link = os.path.join(section_folder, os.path.basename(file_path))
-
-        display_link = display_link.removesuffix(".md")
-
         if len(display_title) > 53:
             display_title = display_title[:50].strip() + "..."
 
+        display_desc = post_metadata.desc
         if len(display_desc) > 103:
             display_desc = display_desc[:100].strip() + "..."
 
         if post_metadata.icon != None:
-            display_title = post_metadata.icon + " " + display_title
+            display_title = f"{post_metadata.icon} {display_title}"
 
         self.content += [
             f":::{{grid-item-card}} {display_title}",
-            f":link: {display_link}",
+            f":link: {post_metadata.link}",
             "",
             f"{display_desc}",
             ":::"
         ]
 
-    def add_section_to_grid(self, folder_path, section_folder):
+    def add_section_to_grid(self, folder_path):
         toc_file_path = os.path.join(folder_path, "_toc.md")
         section_opening_filename = None
 
@@ -81,7 +89,7 @@ class PostGridDirective(GridDirective):
             return
         
         section_opening_file_path = os.path.join(folder_path, section_opening_filename)
-        self.add_post_to_grid(section_opening_file_path, os.path.join(self.posts_folder, section_folder))
+        self.add_post_to_grid(section_opening_file_path)
     
     def run(self):
         # add pages and sections from posts folder
@@ -94,12 +102,10 @@ class PostGridDirective(GridDirective):
         for file in os.listdir(posts_dir):
             file_path = os.path.join(posts_dir, file)
 
-            if file_path.endswith(".md"):
+            if PostGridDirective.is_post(file_path):
                 self.add_post_to_grid(file_path)
-            elif os.path.isdir(file_path):
-                is_section_folder = os.path.isfile(os.path.join(file_path, "_toc.md"))
-                if is_section_folder:
-                    self.add_section_to_grid(file_path, os.path.basename(file_path))
+            elif PostGridDirective.is_section_folder(file_path):
+                self.add_section_to_grid(file_path)
 
         # set default settings for grid directive
         self.arguments = ["1 2 2 3"]
