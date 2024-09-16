@@ -1,11 +1,18 @@
 import os
 import re
+import json
 import frontmatter
+from docutils.parsers.rst import directives
 from sphinx_design.grids import GridDirective
 
 class PostGridDirective(GridDirective):
+    option_spec = dict(GridDirective.option_spec, **{
+        "tags": directives.unchanged
+    })
+
     class PostMetadata:
         def __init__(self):
+            self.tags = []
             self.icon = None
             self.title = "Untitled Post"
             self.desc = ""
@@ -14,6 +21,9 @@ class PostGridDirective(GridDirective):
     def get_post_metadata(self, file_path):
         post = frontmatter.load(file_path)
         post_metadata = PostGridDirective.PostMetadata()
+
+        if "tags" in post.metadata:
+            post_metadata.tags = post.metadata["tags"]
 
         if "title" in post.metadata:
             post_metadata.title = post.metadata["title"]
@@ -52,6 +62,11 @@ class PostGridDirective(GridDirective):
     
     def add_post_to_grid(self, file_path):
         post_metadata = self.get_post_metadata(file_path)
+
+        if self.tags_filter != []:
+            post_contains_at_least_one_tag = bool(set(self.tags_filter) & set(post_metadata.tags))
+            if not post_contains_at_least_one_tag:
+                return
 
         display_title = post_metadata.title
         if len(display_title) > 53:
@@ -92,6 +107,11 @@ class PostGridDirective(GridDirective):
         self.add_post_to_grid(section_opening_file_path)
     
     def run(self):
+        if "tags" not in self.options:
+            self.tags_filter = []
+        else:
+            self.tags_filter = json.loads(self.options["tags"])
+            
         # add pages and sections from posts folder
         self.posts_folder = "posts/"
         self.content = []
