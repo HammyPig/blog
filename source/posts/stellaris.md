@@ -1,10 +1,9 @@
 ---
+icon: "{fas}`gamepad`"
 date: "2024-05-20"
 ---
 
 # A Stellaris Strategy
-
-May 20, 2024
 
 Influence is required to claim systems, either through building outposts or through conquest. It’s an interesting mechanic as it acts as a sort of absolute limit for empire growth, as it is a fairly passive resource which cannot be improved substantially. Because of this, I felt that the nature of influence would give insight into the optimal strategy.
 

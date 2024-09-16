@@ -1,10 +1,9 @@
 ---
+icon: "{fas}`money-bill`"
 date: "2024-04-18"
 ---
 
 # Retirement
-
-April 18, 2024
 
 To begin investing, we first need to understand what we are working towards. We know that the ultimate end-goal is an early retirement. But what does retirement mean? And when does it occur?
 

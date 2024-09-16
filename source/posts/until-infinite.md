@@ -1,10 +1,9 @@
 ---
+icon: "{fas}`lightbulb`"
 date: "2024-05-06"
 ---
 
 # Until Infinite
-
-May 6, 2024
 
 Non-market socialism will never exist until economic theory is redundant altogether. In a finite world, there will always be a need for trade, and therefore, a need for a medium.
 

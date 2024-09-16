@@ -1,4 +1,5 @@
 ---
+icon: "{fas}`lightbulb`"
 date: "2024-05-07"
 ---
 

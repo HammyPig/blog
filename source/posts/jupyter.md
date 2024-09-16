@@ -1,6 +1,9 @@
-# The Quest for a Executable, Publishable, Git-Friendly Python Notebook
+---
+icon: "{fab}`python`"
+date: "2024-09-11"
+---
 
-## 11/09/2024
+# The Quest for a Executable, Publishable, Git-Friendly Python Notebook
 
 After looking at the git differences for my first `.ipynb` post, I realised how ugly jupyter notebooks are in plain text. Essentially they are just large `.json` files with large amounts of useless information.
 

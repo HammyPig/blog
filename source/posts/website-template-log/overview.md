@@ -1,5 +1,7 @@
 ---
+icon: "{fas}`book`"
 title: "Website Template Log"
+date: "2024-09-07"
 ---
 
 # Overview

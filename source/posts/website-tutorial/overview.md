@@ -1,5 +1,7 @@
 ---
+icon: "{fas}`graduation-cap`"
 title: "Website Tutorial"
+date: "2024-09-02"
 ---
 
 # Overview

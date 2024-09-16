@@ -1,4 +1,5 @@
 ---
+icon: "{fas}`money-bill`"
 date: "2024-04-18"
 ---
 

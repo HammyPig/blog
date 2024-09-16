@@ -1,3 +1,8 @@
+---
+icon: "{fab}`docker`"
+date: "2024-09-11"
+---
+
 # Dev Containers Tutorial
 
 The great thing about dev containers is that:
@@ -88,7 +93,7 @@ Then inside the `devcontainer.json` file, place the list like so:
 
 ## Opening a project in a dev container
 
-Inside your project folder, open the command palette and select `Dev Containers: Reopen in Container`.
+Inside your project folder, open the command palette and select `Dev Containers: Reopen in Container`. Make sure to do this everytime you open the project.
 
 ## Updating a dev container
 

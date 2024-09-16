@@ -1,3 +1,8 @@
+---
+icon: "{fas}`book`"
+date: "2024-09-07"
+---
+
 # Web Scraping Notes
 
 In web scraping there are two categories of sites:
