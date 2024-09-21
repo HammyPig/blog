@@ -8,6 +8,7 @@ python-frontmatter
 jupyterlab
 jupytext
 numpy
+scipy
 pandas
 matplotlib
 plotly
