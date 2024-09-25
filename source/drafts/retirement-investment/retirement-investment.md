@@ -18,7 +18,7 @@ By investing 35x your current yearly living expenses into a common S&P 500 index
 
 For example, the average single person living in Australia spends roughly \$4000 a month. To fund this lifestyle indefinitely would require an investment of $4000 \times 12 \times 35 = \$1.68\text{M}$. After accumulating this amount, each year they would sell \$48000 worth of stock to pay for their expenses, knowing that in a years time, the return of the remaining \$1.63M investment will outgrow this deduction.
 
-You may question how tax efficient this strategy is. When considering the current tax brackets and capital gains discount, the amount of tax they would pay on this yearly withdrawal is minimal, varying from 0-$1000. This is because the highly liquid nature of stocks allows an individual to sell only what they need, minimising taxable income. This is in contrast to an asset like real-estate, which forces you to trigger extremely high CGT events all at once.
+You may question how tax efficient this strategy is. When considering the current tax brackets and capital gains discount, the amount of tax they would pay on this yearly withdrawal is minimal, varying from 0-$1000. This is because the highly liquid nature of stocks allows an individual to sell only what they need, minimising taxable income. This is in contrast to selling an asset like real-estate, which forces you to trigger extremely high CGT events all at once.
 
 The 35x figure comes from an assumed investment return of 2.85%. Since stock markets are commonly quoted to perform much higher, this assumption may first seem a bit conversative.
 
@@ -167,7 +167,7 @@ ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"${x/1000000:.1f}
 plt.show()
 ```
 
-Based on 100 years of historical data, a 35x strategy would successfully bridge the gap of events such as WW2, the Cold War, and Black Monday.
+Based on 100 years of historical data, a 35x strategy would successfully bridge the gap of events such as WW2, the Cold War, Black Monday, the dot-com bubble, the GFC, and most recently COVID.
 
 For the strategy to fail, a catastrophic event never before seen in history would need to occur. This would be akin to something like nuclear war, which at such a point, would make money, society, and law irrelevant regardless.
 
