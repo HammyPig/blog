@@ -13,3 +13,4 @@ pandas
 matplotlib
 plotly
 unidecode
+openpyxl
