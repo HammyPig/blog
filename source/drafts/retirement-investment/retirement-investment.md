@@ -153,7 +153,7 @@ for k in threshold_factor_balance_history.keys():
 
 fig, ax = plt.subplots()
 
-plt.plot(experiment_period.index, threshold_factor_balance_history[30])
+plt.plot(experiment_period.index, threshold_factor_balance_history[35])
 plt.plot(experiment_period.index, threshold_factor_balance_history[20], linestyle="dotted")
 
 plt.scatter(dt.datetime(2000, 3, 1), 50000, s=5)
