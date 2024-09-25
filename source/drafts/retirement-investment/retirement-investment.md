@@ -124,14 +124,14 @@ plt.show()
 
 The S&P 500, for example, returns 10.9% p.a. on average. However, this doesn't take into account inflation. In reality, it returns 8.6% when inflation-adjusted. This amount is still impressive though, and would imply that we could invest a much lower 12x our yearly expenses to be kept afloat, while simultaneously keeping up with inflation.
 
-However, if by chance we begin this strategy at an unlucky time, we fall prone to unexpected recessions. See below how even a 20x strategy would quickly exhaust its investment balance during the dot-com bubble (which caused the S&P 500 to drop 40%), whereas a 35x strategy would hold strong enough to recover.
+However, if by chance we begin this strategy at an unlucky time, we fall prone to unexpected recessions. See below how even a 20x strategy would quickly exhaust its investment balance during the dot-com bubble (which caused the S&P 500 to drop 40%), whereas a 35x strategy would hold strong enough to recover, even continuing to push through the following GFC and COVID recessions.
 
 ```{code-cell} ipython3
 :tags: [remove-input]
 
 threshold_factor_balance_history = {
     20: [],
-    30: []
+    35: []
 }
 
 for k in threshold_factor_balance_history.keys():
