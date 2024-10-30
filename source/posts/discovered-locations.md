@@ -40,7 +40,7 @@ def plot_map(geojson, highlighted_locations, locations_column_name):
     plt.show()
 ```
 
-## World
+## Earth
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -56,7 +56,7 @@ geojson = geojson.to_crs("EPSG:3857")
 plot_map(geojson, highlighted_locations, locations_column_name)
 ```
 
-## Australian States
+## Australia
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -70,7 +70,7 @@ geojson = geopandas.read_file(url)
 plot_map(geojson, highlighted_locations, locations_column_name)
 ```
 
-## US States
+## United States
 
 ```{code-cell} ipython3
 :tags: [remove-input]
