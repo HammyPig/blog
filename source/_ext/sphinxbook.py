@@ -66,6 +66,14 @@ class PostGridDirective(GridDirective):
         
         return folder_contains_toc_file
     
+    def is_post_folder(file_path):
+        if not os.path.isdir(file_path):
+            return False
+        
+        md_files = [f for f in os.listdir(file_path) if f.endswith(".md")]
+
+        return len(md_files) == 1
+    
     def add_post_metadata_to_grid(self, post_metadata):
         display_title = post_metadata.title
         if len(display_title) > 53:
@@ -106,6 +114,12 @@ class PostGridDirective(GridDirective):
         section_metadata = self.get_post_metadata(section_opening_file_path)
         
         return section_metadata
+    
+    def get_post_folder_metadata(self, folder_path):
+        for file_name in os.listdir(folder_path):
+            if file_name.endswith(".md"):
+                file_path = os.path.join(folder_path, file_name)
+                return self.get_post_metadata(file_path)
     
     def run(self):
         # get directive options
@@ -148,6 +162,8 @@ class PostGridDirective(GridDirective):
                 post_metadata = self.get_post_metadata(file_path)
             elif PostGridDirective.is_section_folder(file_path):
                 post_metadata = self.get_section_metadata(file_path)
+            elif PostGridDirective.is_post_folder(file_path):
+                post_metadata = self.get_post_folder_metadata(file_path)
             else:
                 continue
 
