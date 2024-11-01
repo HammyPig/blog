@@ -29,9 +29,9 @@ plt.rc("ytick", labelsize="x-small")
 
 # Bond Allocation
 
-It is commonly preached that bonds are essential to a sustainable portfolio.
+It is commonly preached that bonds are essential to a sustainable portfolio. But how true really is this statement? After all, bonds are commonly known to sacrifice performance, so to have a portfolio with the lowest amount necessary is optimal. 
 
-To explore how true this statement is, we will compare 5 different stock/bond allocations; a control 100% stock allocation, along with the 4 different allocations based approximately on the Vanguard ready-made portfolios.[^passiveinvestingaustralia]
+To explore the effects of bonds, we will compare 5 different stock/bond allocations; a control 100% stock allocation, along with the 4 different allocations based approximately on the Vanguard ready-made portfolios.[^passiveinvestingaustralia]
 
 [^passiveinvestingaustralia]: https://passiveinvestingaustralia.com/vdhg-or-roll-your-own/
 
