@@ -148,6 +148,8 @@ class PostGridDirective(GridDirective):
                 post_metadata = self.get_post_metadata(file_path)
             elif PostGridDirective.is_section_folder(file_path):
                 post_metadata = self.get_section_metadata(file_path)
+            else:
+                continue
 
             post_metadata_list.append(post_metadata)
 
