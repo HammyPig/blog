@@ -1,3 +1,8 @@
+---
+icon: "{fas}`person-hiking`"
+date: "2024-11-13"
+---
+
 # Nomad Build
 
 If one wishes to live a nomadic lifestyle, what items should they own? Here I will present an item list which all fits inside a single 40L backpack. This ensures that you don't need to rely on any storage, or vehicle to move things around. Additionally, having it all in a backpack keeps your hands free when on the move.
