@@ -1,4 +1,7 @@
 ---
+icon: "{fas}`money-bill`"
+date: "2024-11-13"
+desc: "It is commonly preached that bonds are essential to a sustainable portfolio. But how true really is this statement? After all, bonds are commonly known to sacrifice performance, so to have a portfolio with the lowest amount necessary is optimal. To explore the effects of bonds, we will compare 5 different stock/bond allocations; a control 100% stock allocation, along with the 4 different allocations based approximately on the Vanguard ready-made portfolios."
 jupytext:
   formats: md:myst
   text_representation:
