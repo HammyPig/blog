@@ -332,7 +332,7 @@ ax.set_xlabel("Stock/Bond Allocation")
 ax.set_xticklabels(xticklabels)
 
 ax.set_ylabel("Portfolio Performance")
-ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{x * 100}%"))
+ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{x * 100:.0f}%"))
 
 plt.show()
 ```
@@ -358,7 +358,7 @@ ax.set_xlabel("Stock/Bond Allocation")
 ax.set_xticklabels(xticklabels)
 
 ax.set_ylabel("Portfolio Performance")
-ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{x * 100}%"))
+ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{x * 100:.0f}%"))
 
 plt.show()
 ```
