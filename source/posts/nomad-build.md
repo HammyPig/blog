@@ -1,184 +1,324 @@
 ---
-icon: "{fas}`lightbulb`"
-date: "2024-09-16"
+icon: "{fas}`person-hiking`"
+date: "2024-11-13"
 ---
 
 # Nomad Build
 
 If one wishes to live a nomadic lifestyle, what items should they own? Here I will present an item list which all fits inside a single 40L backpack. This ensures that you don't need to rely on any storage, or vehicle to move things around. Additionally, having it all in a backpack keeps your hands free when on the move.
 
-## Item list
+## Clothes
 
-**Clothes**
-- 3 Shirts
-- 2 Pants
-- 5 Socks
-- 5 Underwear
-- Singlet: Can be worn as nightwear, or for extra warmth.
-- Swim Trunks: Lightweight and enables swimming. Doubles as shorts.
-- Jacket: Waterproof. Can be used for the rain or for warmth.
-- Shoes
-- Flip-flops: Avoid stepping on dirty shower floors.
+### Upperbody
 
-**Luggage**
-- 40L Backpack: Can be brought on a plane as a carry-on, and enables your hands to be free.
-- Non-TSA Luggage Lock: Attached to backpack. Avoid TSA as they have a security flaw, allowing random people to open them. Additionally, TSA locks were designed for check-in luggage, not carry-on.
-- Messenger Bag: Used as a daypack for carrying around e.g. a water bottle.
-- Packing Cubes: Better backpack storage management.
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Weight (g)</th>
+    </tr>
+    <tr>
+        <td>2 x <a href="https://www.icebreaker.com/en-au/mens-baselayers/merino-200-oasis-long-sleeve-crew-neck-thermal-top/104365A2.html">Merino Long Sleeve Shirt</a></td>
+        <td>434</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.icebreaker.com/en-au/mens-sweaters/original-long-sleeve-half-zip-top/B00871A2.html">Merino Jacket</a></td>
+        <td>432</td>
+    </tr>
+    <tr>
+        <td>Down Jacket</td>
+        <td>~250</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.patagonia.com.au/products/mens-torrentshell-3l-rain-jacket-85241-enlb">Rain Jacket</a></td>
+        <td>400</td>
+    </tr>
+    <tr>
+        <th>Total Items: 4</th>
+        <th>Total Weight: 1516</th>
+    </tr>
+</table>
 
-**Daily Use**
-- Hand Sanitiser: Put in daypack. When your out but can't wash your hands.
-- Water Bottle: Stay hydrated.
+To provide comfort in all seasons while minimising weight, I use a modular layering system made of three components:
 
-**Technology**
-- Phone, Phone Charger
-- Laptop, Laptop Charger, Laptop Case: Avoid if you can as can be quite heavy and annoying.
-- Earphones
-- Earphone Case: Coords don't get tangled or ripped.
-- Door Lock: For security and peace of mind.
+- Base layer: Prevents sweat from building up on the skin by wicking it away from the body.
+- Mid layer: Provides warmth.
+- Outer layer: Keeps wind and rain out.
 
-**Toiletries**
-- Toothbrush, Toothpaste: Dental care is important.
-- Tweezers, Nail Clippers: Can be extremely annoying without.
-- Face Towel: Avoid dirty hostel towels.
+For my base layer, I use a merino long sleeve shirt. Merino is a type of wool which is softer than regular wool, making it less itchy on the skin. Wool is excellent at drawing moisture away from the body, as opposed to something like cotton, which retains sweat and makes you colder.
 
-**Comforts**
-- Earplugs: Mute loud noises when attempting to sleep, e.g. snoring hostel guests.
-- Sleeping Bag: avoid dirty bedding.
+For the mid layer, I use a merino jacket, down jacket, or both, depending on the desired temperature.
 
-**Documents**
-- Passport
-- Driver's License
+For the outer layer, I use a rain jacket with pit zips, which help with ventilation as rain jackets typically make you feel very humid.
 
-## Personal experience
+### Lowerbody
 
-I have yet to do long-term travelling, so this list primarily comes from my experience on a few short trips. However, I'll continue to update this list when necessary.
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Weight (g)</th>
+    </tr>
+    <tr>
+        <td>2 x <a href="https://www.icebreaker.com/en-au/mens-baselayers/merino-200-oasis-thermal-leggings/104369A2.html">Merino Leggings</a></td>
+        <td>400</td>
+    </tr>
+    <tr>
+        <td>Jeans</td>
+        <td>~500</td>
+    </tr>
+    <tr>
+        <td>6 x Underwear</td>
+        <td>~300</td>
+    </tr>
+    <tr>
+        <td>6 x <a href="https://www.macpac.com.au/macpac-merino-hiking-sock/114832.html">Merino Socks</a></td>
+        <td>~600</td>
+    </tr>
+    <tr>
+        <th>Total Items: 4</th>
+        <th>Total Weight: 1800</th>
+    </tr>
+</table>
 
-## Researching existing item lists
+For the lower body, I wear merino leggings underneath my jeans for extra warmth.
 
-Out of curiosity, I also did some research to discover what other people's nomad build looked like. First I went to [The Digital Nomad subreddit wiki](https://www.reddit.com/r/digitalnomad/wiki/quick_start/#wiki_what_to_bring), though surprisingly it did not contain anything too useful, and only provided a vague idea of packing light.
+Using merino socks as like before, cotton can absorb sweat, which has previously made my feet freezing in cold environments.
 
-The next resouce I went to was the One Bag subreddit. The subreddit wiki links to the [One Bag website](https://www.onebag.com/). Here they provide an incredibly extensive list of items, which I have collapsed into dropdown menus for your convenience:
+### Footwear
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Weight (g)</th>
+    </tr>
+    <tr>
+        <td>Shoes</td>
+        <td>~500</td>
+    </tr>
+    <tr>
+        <td><a href="https://havaianas.com.au/collections/top/products/top-thongs">Flip-flops</a></td>
+        <td>~100</td>
+    </tr>
+    <tr>
+        <th>Total Items: 2</th>
+        <th>Total Weight: 600</th>
+    </tr>
+</table>
 
-::::{dropdown} One Bag Checklist
+Flip-flops are useful for avoiding dirty floors, bathrooms, and showers. They can also be used at the beach or pools.
 
-:::{dropdown} Wardrobe
-- dressy jacket
-- 2-4 shirts/blouses/tops
-- 2 pairs trousers/skirts (shorts?)
-- 3+ pairs socks
-- 3+ pairs undergarments
-- long (lightweight) underwear
-- swimsuit
-- dark (cardigan) sweater
-- rainwear (umbrella?)
-- parka, coat, or equivalent
-- long T-shirt or sarong (nightclothes?)
-- necktie, scarf, shawl, hairband, bandanna
-- gloves / mittens
-- sun hat / knitted cap, hat clip
-- 1 pair dressy shoes (laces?)
-- 1 pair walking shoes/boots (laces?)
-- flip-flops or sandals
-- belt
-:::
+### Accessories
 
-:::{dropdown} Luggage
-- travel pack or shoulder bag (& luggage cart?)
-- daypack (fanny pack? purse?)
-- lightweight duffel/laundry bag
-- luggage lock(s) (cable?)
-:::
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Weight (g)</th>
+    </tr>
+    <tr>
+        <td><a href="https://www.macpac.com.au/macpac-merino-knit-glove/114508.html">Gloves</a></td>
+        <td>~50</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.icebreaker.com/en-au/accessories/merino-200-oasis-beanie/0A56SHA2.html">Beanie</a></td>
+        <td>37</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.macpac.com.au/macpac-merino-150-neck-gaiter/118861.html">Gaiter</a></td>
+        <td>40</td>
+    </tr>
+    <tr>
+        <th>Total Items: 3</th>
+        <th>Total Weight: 127</th>
+    </tr>
+</table>
 
-:::{dropdown} Tools
-- alarm clock/watch (batteries?)
-- flashlight, headstrap, extra batteries (bulbs?)
-- knife, screwdrivers, pliers, scissors
-- spoon (fork? chopsticks? spork?), (coffee tin lid) plate or bowl
-- compass
-- whistle
-- door lock
-:::
+### Sleepwear
 
-:::{dropdown} Repairs
-- safety pins, cord, fasteners
-- sewing kit, including large needle to accommodate dental floss
-- (Ziploc®) plastic bags, garbage bags
-- repair tape (packing tape? glue?)
-:::
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Weight (g)</th>
+    </tr>
+    <tr>
+        <td>Pajama Shirt</td>
+        <td>~100</td>
+    </tr>
+    <tr>
+        <td>Pajama Shorts</td>
+        <td>~100</td>
+    </tr>
+    <tr>
+        <th>Total Items: 2</th>
+        <th>Total Weight: 200</th>
+    </tr>
+</table>
 
-:::{dropdown} Toiletries
-- toothbrush, cap, tooth cleaner, floss
-- razor, blades, shaving lubricant
-- comb and/or hairbrush
-- shampoo, bar soap & container
-- deodorant
-- nail clippers
-- [unbreakable] mirror
-- viscose towel (washcloth?)
-:::
+## Luggage
 
-:::{dropdown} Comforts
-- inflatable travel pillow
-- earplugs (sleep mask?)
-- sleep sack (sleeping bag? bivouac sack? blanket? tent?)
-:::
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Weight (g)</th>
+    </tr>
+    <tr>
+        <td><a href="https://www.kathmandu.com.au/litehaul-carry-on-38l-v3.html">40L Backpack</a></td>
+        <td>1420</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.amazon.com/dp/B000FKEZ3S">Non-TSA Luggage Lock</a>
+        <td>~50</td>
+    <tr>
+        <td>2 x <a href="https://muji.com.au/collections/packing-cubes/products/polyester-travel-gusset-case-double">Small Double-Sided Packing Cube</a></td>
+        <td>~10</td>
+    </tr>
+    <tr>
+        <td><a href="https://aersf.com/collections/go-collection/products/go-pack-2">Packable Backpack</a></td>
+        <td>590</td>
+    </tr>
+    <tr>
+        <th>Total Items: 4</th>
+        <th>Total Weight: 2070</th>
+    </tr>
+</table>
 
-:::{dropdown} Laundry
-- detergent
-- (surgical latex braid) clothesline (carabiner?)
-- universal (flat) sink stopper
-- inflatable hangers [to dry clothes]
-:::
+The 40L backpack acts as my sole storage. Backpacks enable your hands to be free, making them less clunky to carry around than something like a suitcase. A 40L one is typically the largest carry-on you are allowed to bring on a plane, allowing you to skip checking-in your luggage.
 
-:::{dropdown} Health
-- toilet paper, water squirt bottle, antibacterial wipes
-- (chemical or mechanical) water purifier
-- analgesic of choice
-- diarrhea treatment of choice
-- infection treatment of choice
-- malaria tablets
-- insect repellent, mosquito net
-- sunscreen, lip balm
-- tweezers
-- bandages (other first aid?)
-- menstrual, contraceptive, and/or prophylactic supplies
-- vitamins, necessary medications
-- (collapsible) plastic water bottle & cup
-- dark glasses, retainer, case
-- lens cleaning cloth/supplies, copy of prescription (spare glasses?)
-:::
+I have a luggage lock to prevent it being unzipped by accident or by others. Avoid TSA luggage locks as they have a security flaw, allowing random people to open them. Additionally, TSA locks provide no benefit as they were designed for check-in luggage, not carry-on.
 
-:::{dropdown} Paperwork
-- pen(s), small notebook, glue stick [for notes, addresses, diary, …]
-- personal address book (stamps?)
-- maps, guidebooks, phrase books, Post-it® notes, restaurant lists, membership cards, business/calling cards, telephone access numbers
-- reading material
-- large envelopes [to mail things home]
-:::
+I use my packing cubes to store all my clothes, making them extremely easily to pack/unpack into my bag. The packing cubes are double-sided so I can move dirty laundry from a 'clean' side to a 'dirty' side.
 
-:::{dropdown} Valuables
-- passport, visas, extra passport photos, vaccination certificates
-- copies of important documents
-- (international?) driver's license, health insurance information
-- travel tickets
-- charge & ATM cards, cash (traveller's cheques?)
-- 2 personal cheques
-- security pouch [worn under clothes]
-:::
+The packable backpack is a lighter daypack that I can use when I'm able to store my 40L somewhere safe.
 
-:::{dropdown} Specialty Items
-- camera (lenses? flash? tripod? extra cards & batteries? charger? download adapter?)
-- cellular telephone (charger/adapter(s)/battery?)
-- travel computer (flash drive? power cord/adapter(s)? network cable(s)?)
-- jump rope
-- (solar) calculator
-- foodstuffs
-- gifts
-:::
+## Technology
 
-::::
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Weight (g)</th>
+    </tr>
+    <tr>
+        <td><a href="https://support.apple.com/en-us/111883">13-inch Laptop</a></td>
+        <td>1290</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.amazon.com.au/Inateck-Protection-Compatible-2016-2020-Accesory/dp/B095WT256">Laptop Sleeve and Cable Bag</a></td>
+        <td>268</td>
+    </tr>
+    <tr>
+        <td><a href="https://support.apple.com/en-us/111943">Phone</a></td>
+        <td>138</td>
+    </tr>
+    <tr>
+        <td>Laptop & Phone Charger</td>
+        <td>~50</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.apple.com/au/shop/product/MWU53FE/A/earpods-35mm-headphone-plug">Earphones</a></td>
+        <td>~10</td>
+    </tr>
+    <tr>
+        <td>Earphone Case</td>
+        <td>~10</td>
+    </tr>
+    <tr>
+        <th>Total Items: 6</th>
+        <th>Total Weight: 1766</th>
+    </tr>
+</table>
 
-Initially I wasn't even going to mention this list as it seemed to be more akin to an apocalypse survival kit than a lightweight nomad build. However, I then saw that the authors advised that this list should serve instead as the scope of all possible items you could possible bring, i.e. if you were considering taking something on a trip which was **not** on this list, it definitely should not be brought.
+Although bringing a laptop is a lot of overhead, it is essential for me as it allows me to continue working on projects during my travels. A laptop sleeve protects it from impacts and water.
 
-Additionally, the One Bag site provides extensive descriptions on the use cases for each item to assist you in filtering it down to your individual needs.
+Avoid taking headphones, and instead opt for earphones. They are much more lightweight and compact.
+
+## Hygiene
+
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Weight (g)</th>
+    </tr>
+    <tr>
+        <td><a href="https://www.knotty.com.au/products/knotty-junior">Small Turkish Towel</a></td>
+        <td>~200</td>
+    </tr>
+    <tr>
+        <td>Mesh Toiletries Bag</td>
+        <td>~10</td>
+    </tr>
+    <tr>
+        <td>Mesh Toothbrush Bag</td>
+        <td>~10</td>
+    </tr>
+    <tr>
+        <td>Toothbrush</td>
+        <td>~10</td>
+    </tr>
+    <tr>
+        <td>Nail Clipper</td>
+        <td>~10</td>
+    </tr>
+    <tr>
+        <td>Tweezers</td>
+        <td>~10</td>
+    </tr>
+    <tr>
+        <th>Total Items: 6</th>
+        <th>Total Weight: 250</th>
+    </tr>
+</table>
+
+Turkish towels are a lightweight quick-drying type of towel. A hand towel size is sufficient for drying your entire body, and minimises weight. Be warned that they are definitely not as comfortable as a regular towel, as they are less soft and feel much more cold while you dry yourself.
+
+Both the toiletries and toothbrush bag are mesh to allow airflow, to possibly aid in drying any sightly wet items.
+
+I take a dedicated toothbrush bag as most of the time I only need to take my toothbrush to the bathroom. Needing to bring all my toiletry items would be clunky and unnecessary.
+
+Nail clipper and tweezers, although small and forgetable, can be extremely annoying to live without.
+
+## Laundry
+
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Weight (g)</th>
+    </tr>
+    <tr>
+        <td><a href="https://www.macpac.com.au/sea-to-summit-lightweight-dry-bag-5l-/121523.html">5L Dry Bag</a></td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td><a href="https://www.macpac.com.au/sea-to-summit-clothesline/119927-BLK00-OS.html">Clothesline</a></td>
+        <td>28</td>
+    </tr>
+    <tr>
+        <th>Total Items: 2</th>
+        <th>Total Weight: 78</th>
+    </tr>
+</table>
+
+You can use a 5L dry bag to do your own laundry by hand.[^onebagtravels-laundry] Afterwards, you can hang your laundry on your clothesline to dry them overnight while you sleep.
+
+[^onebagtravels-laundry]: https://www.youtube.com/watch?v=XUd4c2q5pbU
+
+## Comforts
+
+<table class="table">
+    <tr>
+        <th>Item</th>
+        <th>Weight (g)</th>
+    </tr>
+    <tr>
+        <td><a href="https://www.mont.com.au/collections/sleeping-bag-liners/products/pure-silk-sleeping-bag-inner-sheet">Silk Sleeping Bag Liner w/ Hood</a></td>
+        <td>152</td>
+    </tr>
+    <tr>
+        <td>Earplugs</td>
+        <td>~10</td>
+    </tr>
+    <tr>
+        <th>Total Items: 2</th>
+        <th>Total Weight: 162</th>
+    </tr>
+</table>
+
+A sleeping bag liner is essentially a bedsheet in a sleeping bag form. You can wrap this around yourself and place the hood over your pillow to avoid dirty bedding.
+
+Use earplugs to mute noises like snoring hostel guests.
