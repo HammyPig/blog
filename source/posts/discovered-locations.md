@@ -63,8 +63,11 @@ highlighted_locations = [
 ]
 
 geojson = geopandas.read_file(url)
+geojson = geojson.to_crs("ESRI:53030") # Display map using Robinson projection (https://epsg.io/53030).
+
+# Remove regions which distort the map positioning.
 geojson = geojson[geojson["name"] != "Antarctica"]
-geojson = geojson.to_crs("EPSG:3857")
+geojson = geojson[geojson["name"] != "Fiji"]
 
 plot_map(geojson, highlighted_locations, locations_column_name)
 ```
