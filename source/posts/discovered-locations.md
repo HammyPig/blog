@@ -72,6 +72,33 @@ geojson = geojson[geojson["name"] != "Fiji"]
 plot_map(geojson, highlighted_locations, locations_column_name)
 ```
 
+## Europe
+
+```{code-cell} ipython3
+:tags: [remove-input]
+
+url = "https://raw.githubusercontent.com/leakyMirror/map-of-europe/refs/heads/master/GeoJSON/europe.geojson"
+locations_column_name = "NAME"
+highlighted_locations = [
+    "Finland",
+    "Sweden",
+    "Norway",
+    "Denmark",
+    "Germany",
+    "Poland",
+    "Czech Republic",
+    "Hungary",
+    "Austria",
+    "Italy",
+    "Switzerland"
+]
+
+geojson = geopandas.read_file(url)
+geojson = geojson.to_crs("EPSG:3035") # Set map projection.
+
+plot_map(geojson, highlighted_locations, locations_column_name)
+```
+
 ## Australia
 
 ```{code-cell} ipython3
