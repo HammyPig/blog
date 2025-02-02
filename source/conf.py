@@ -23,6 +23,7 @@ html_theme_options = {
     "navbar_start": ["navbar-logo"],
     "navbar_center": ["empty-space"],
     "navbar_end": ["navbar-icon-links"],
+    "navbar_persistent": [],
 
     "logo": {
         "text": "James Walden",
