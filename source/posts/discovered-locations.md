@@ -46,8 +46,21 @@ def plot_map(geojson, highlighted_locations, locations_column_name):
 :tags: [remove-input]
 
 url = "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/countries.geojson"
-highlighted_locations = ["Australia", "United States of America"]
 locations_column_name = "name"
+highlighted_locations = [
+    "Australia",
+    "Finland",
+    "Sweden",
+    "Norway",
+    "Denmark",
+    "Germany",
+    "Poland",
+    "Czech Republic",
+    "Hungary",
+    "Austria",
+    "Italy",
+    "Switzerland"
+]
 
 geojson = geopandas.read_file(url)
 geojson = geojson[geojson["name"] != "Antarctica"]
@@ -62,27 +75,16 @@ plot_map(geojson, highlighted_locations, locations_column_name)
 :tags: [remove-input]
 
 url = "https://raw.githubusercontent.com/tonywr71/GeoJson-Data/refs/heads/master/australian-states.json"
-highlighted_locations = ["Queensland", "New South Wales", "Victoria", "South Australia", "Tasmania"]
+highlighted_locations = [
+    "Queensland",
+    "New South Wales",
+    "Victoria",
+    "South Australia",
+    "Tasmania"
+]
 locations_column_name = "STATE_NAME"
 
 geojson = geopandas.read_file(url)
 
-plot_map(geojson, highlighted_locations, locations_column_name)
-```
-
-## United States
-
-```{code-cell} ipython3
-:tags: [remove-input]
-
-url = "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/refs/heads/master/data/geojson/us-states.json"
-highlighted_locations = ["Massachusetts", "Ohio"]
-locations_column_name = "name"
-
-geojson = geopandas.read_file(url)
-geojson = geojson[geojson["name"] != "Alaska"]
-geojson = geojson[geojson["name"] != "Hawaii"]
-geojson = geojson[geojson["name"] != "Puerto Rico"]
-    
 plot_map(geojson, highlighted_locations, locations_column_name)
 ```
