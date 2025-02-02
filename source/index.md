@@ -12,9 +12,10 @@ I created this website after the realisation of two things:
 1. Storing knowledge is easier than rediscovering it from scratch.
 1. It is hard to go alone in this world.
 
-To create a central hub which records the best of my knowledge is useful to me as I can always relearn things which I have forgotten.
+To create a central hub which records the best of my knowledge is useful as it then provides the following solutions:
 
-Having it accessible to others means that we can learn from each other in our common quest of discovering what knowledge truly stands the test of time.
+1. I can always relearn things which I have forgotten.
+1. Having it accessible to others means that we can each learn from each other in our common quest of improving our lives.
 
 With all that being said, please feel free to browse my posts found below. Thank you for visiting :)
 
