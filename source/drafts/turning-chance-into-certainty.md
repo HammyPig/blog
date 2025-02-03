@@ -413,7 +413,3 @@ plt.show()
 ```
 
 Much better. And there we have it! From our original 60:40 win/lose $10 game, it would seem that we should only participate in the game on the condition that we can have ~500 attempts, as by then we are certain to be winners.
-
-```{code-cell} ipython3
-
-```
