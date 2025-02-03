@@ -1,4 +1,6 @@
 ---
+icon: "{fas}`lightbulb`"
+date: "2024-09-21"
 jupytext:
   formats: md:myst
   text_representation:
