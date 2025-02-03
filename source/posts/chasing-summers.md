@@ -27,12 +27,33 @@ After living through Melbourne's winter, I now have a greater appreciation of th
 
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-import pandas as pd
-import plotly.graph_objects as go
-import plotly.io as pio
-pio.templates.default = "ggplot2"
 from unidecode import unidecode
 from IPython.display import display, Markdown
+from cycler import cycler
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
+import matplotlib.patches as patches
+
+plt.style.use("default")
+plt.rc("figure", labelsize="x-small", autolayout=True, figsize=(4, 3), facecolor="white")
+plt.rc("xtick", labelsize="x-small")
+plt.rc("ytick", labelsize="x-small")
+
+custom_colors = [
+    "#636EFA",
+    "#EF553B",
+    "#00CC96",
+    "#AB63FA",
+    "#FFA15A",
+    "#19D3F3",
+    "#FF6692",
+    "#B6E880",
+    "#FF97FF",
+    "#FECB52"
+]
+
+plt.rc('axes', prop_cycle=cycler('color', custom_colors))
 ```
 
 ```{code-cell} ipython3
@@ -161,24 +182,22 @@ for city in cities_of_interest:
 ```{code-cell} ipython3
 :tags: [remove-input]
 
-fig = go.Figure()
+fig, ax = plt.subplots(figsize=(6, 3))
+
 for city in cities_of_interest:
-    fig.add_trace(go.Scatter(x=city_climates[city].index, y=city_climates[city]["Mean daily maximum °C"], name=city))
+    plt.plot(city_climates[city]["Mean daily maximum °C"], marker=".")
 
-fig.add_hrect(y0=20, y1=30, fillcolor="green")
+ax.add_patch(patches.Rectangle((0, 20), 11, 10, color="#a6cda6"))
 
-fig.update_layout(
-    title="Monthly Temperature of Different Cities",
-    legend_title="City",
-    xaxis_title="Month",
-    yaxis_title="Mean Daily Maximum",
-    yaxis_ticksuffix="°C"
-)
+ax.set_title("City Temperature Cycles")
+ax.set_ylabel("Mean daily maximum")
+ax.legend(cities_of_interest, bbox_to_anchor=(1, 1))
+ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{x:.0f}°C"))
 
-fig.show()
+plt.show()
 ```
 
-If you select only Sydney and Vienna **(by double clicking Sydney in the legend and then enabling Vienna)**, you can see that their temperatures exactly align when winter approaches for either city. It seems we have our best candidates.
+When looking at Sydney and Vienna, you can see that their temperatures exactly align when winter approaches for either city. It seems we have our best candidates.
 
 ## Daily sunshine of different cities
 
@@ -187,23 +206,17 @@ Next, we move onto sunshine. This metric is measured in 'sunshine hours', which 
 ```{code-cell} ipython3
 :tags: [remove-input]
 
-fig = go.Figure()
+fig, ax = plt.subplots(figsize=(6, 3))
+
 for city in cities_of_interest:
-    fig.add_trace(go.Scatter(
-        x=city_climates[city].index,
-        y=city_climates[city]["Mean monthly sunshine hours"] / (365 / 12),
-        name=city,
-        hovertemplate="%{y:.2f}"
-    ))
+    plt.plot(city_climates[city]["Mean monthly sunshine hours"] / (365/12), marker=".")
 
-fig.update_layout(
-    title="Daily Sunshine of Different Cities",
-    legend_title="City",
-    xaxis_title="Month",
-    yaxis_title="Mean Daily Sunshine Hours"
-)
+ax.set_title("Daily Sunshine of Different Cities")
+ax.set_ylabel("Mean Daily Sunshine Hours")
+ax.legend(cities_of_interest, bbox_to_anchor=(1, 1))
+ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{x:.0f}h"))
 
-fig.show()
+plt.show()
 ```
 
 As we can see, our previous candidates of Vienna and Sydney still hold up. Although Sydney is already quite consistent with sunshine, the objective improvement of Vienna's summer sunshine over Sydney's fairer winter is still appreciated.
