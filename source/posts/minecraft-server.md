@@ -3,7 +3,7 @@ icon: "{fas}`cube`"
 date: "2025-02-03"
 ---
 
-# A Great Minecraft Server
+# Making a Great Minecraft Server
 
 ```{note}
 This guide is up-to-date with Minecraft version 1.21.4.
