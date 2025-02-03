@@ -9,7 +9,9 @@ date: "2025-02-03"
 This guide is up-to-date with Minecraft version 1.21.4.
 ```
 
-This is not a guide on how to create a Minecraft server, but rather, what can be done to bring an existing one to its full potential. From experience, I've noted two observations:
+This is not a guide on how to create a Minecraft server, but rather, what can be done to bring an existing one to its full potential.
+
+From experience, I've noted two observations:
 
 1. Players enjoy the convenience of teleportation, whether it be to a set location (e.g. a home or in a mine) or to another player.
 1. The native launcher of Minecraft focuses only on launching the most up-to-date version of Minecraft. There is no confirmation to update the game, and it is not so intuitive to revert to a different version.
