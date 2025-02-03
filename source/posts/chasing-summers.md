@@ -16,10 +16,6 @@ kernelspec:
 
 # Chasing Summers
 
-:::{note}
-This post does not consist of any formal research effort and is more of a fun exploration of a random topic.
-:::
-
 After living through Melbourne's winter, I now have a greater appreciation of the sun. This lead me thinking. I love living in the sun, which means that ideally I would live in two cities: one in the northern hemisphere and one in the south. I could then live an endless summer by switching cities whenever winter loomed. But here is the question, what two cities would I select?
 
 ```{code-cell} ipython3
@@ -162,11 +158,9 @@ After being traumatised by Melbourne's perpetual winters, the next questions bec
 
 ## Monthly temperature of different cities
 
-Let's first start with temperature. I found online that the ideal temperature for humans to live in is between 20°C and 25°C, otherwise known by its fancy term: the 'thermalneutral' zone.[^ideal-temperature]
+Let's first start with temperature. I found online that the ideal temperature for humans to live in is between 20°C and 25°C, otherwise known by its fancy term: the 'thermalneutral' zone.[^ideal-temperature] Because of my summer bias, I opted to extend this 'optimal' range all the way to 30°C.
 
 [^ideal-temperature]: http://www.atmo.arizona.edu/students/courselinks/fall12/atmo336/lectures/sec1/comfort.html
-
-Because of my summer bias, however, I opted to extend this 'optimal' range all the way to 30°C.
 
 Below I then graphed out the monthly temperatures of our candidate cities, with our warm 20°C to 30°C goldilocks zone highlighted in green.
 
