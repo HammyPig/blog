@@ -178,14 +178,16 @@ for city in cities_of_interest:
 
 fig, ax = plt.subplots(figsize=(6, 3))
 
-for city in cities_of_interest:
+sorted_cities_of_interest = sorted(cities_of_interest)
+
+for city in sorted_cities_of_interest:
     plt.plot(city_climates[city]["Mean daily maximum °C"], marker=".")
 
 ax.add_patch(patches.Rectangle((0, 20), 11, 10, color="#a6cda6"))
 
 ax.set_title("City Temperature Cycles")
 ax.set_ylabel("Mean daily maximum")
-ax.legend(cities_of_interest, bbox_to_anchor=(1, 1))
+ax.legend(sorted_cities_of_interest, bbox_to_anchor=(1, 1))
 ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{x:.0f}°C"))
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
@@ -204,12 +206,12 @@ Next, we move onto sunshine. This metric is measured in 'sunshine hours', which 
 
 fig, ax = plt.subplots(figsize=(6, 3))
 
-for city in cities_of_interest:
+for city in sorted_cities_of_interest:
     plt.plot(city_climates[city]["Mean monthly sunshine hours"] / (365/12), marker=".")
 
 ax.set_title("Daily Sunshine of Different Cities")
 ax.set_ylabel("Mean Daily Sunshine Hours")
-ax.legend(cities_of_interest, bbox_to_anchor=(1, 1))
+ax.legend(sorted_cities_of_interest, bbox_to_anchor=(1, 1))
 ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{x:.0f}h"))
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
