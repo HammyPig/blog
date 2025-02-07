@@ -35,7 +35,7 @@ def plot_map(geojson, highlighted_locations, locations_column_name):
     geojson.boundary.plot(ax=ax, linewidth=0.5, color="black")
 
     highlight = geojson[geojson[locations_column_name].isin(highlighted_locations)]
-    highlight.plot(ax=ax, color="yellow")
+    highlight.plot(ax=ax, color="orange")
 
     plt.show()
 ```
