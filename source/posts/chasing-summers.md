@@ -187,6 +187,8 @@ ax.set_title("City Temperature Cycles")
 ax.set_ylabel("Mean daily maximum")
 ax.legend(cities_of_interest, bbox_to_anchor=(1, 1))
 ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{x:.0f}°C"))
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
 
 plt.show()
 ```
@@ -209,6 +211,8 @@ ax.set_title("Daily Sunshine of Different Cities")
 ax.set_ylabel("Mean Daily Sunshine Hours")
 ax.legend(cities_of_interest, bbox_to_anchor=(1, 1))
 ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{x:.0f}h"))
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
 
 plt.show()
 ```
