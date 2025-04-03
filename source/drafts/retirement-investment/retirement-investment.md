@@ -1,4 +1,6 @@
 ---
+icon: "{fas}`money-bill`"
+date: "2024-09-25"
 jupytext:
   formats: md:myst
   text_representation:
