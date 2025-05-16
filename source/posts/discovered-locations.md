@@ -7,7 +7,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.16.4
+    jupytext_version: 1.16.7
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -49,6 +49,7 @@ url = "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geo
 locations_column_name = "name"
 highlighted_locations = [
     "Australia",
+    "United Arab Emirates",
     "Finland",
     "Sweden",
     "Norway",
@@ -59,7 +60,16 @@ highlighted_locations = [
     "Hungary",
     "Austria",
     "Italy",
-    "Switzerland"
+    "Switzerland",
+    "Luxembourg",
+    "Netherlands",
+    "Belgium",
+    "United Kingdom",
+    "Ireland",
+    "France",
+    "Spain",
+    "United States of America",
+    "Canada"
 ]
 
 geojson = geopandas.read_file(url)
@@ -90,7 +100,14 @@ highlighted_locations = [
     "Hungary",
     "Austria",
     "Italy",
-    "Switzerland"
+    "Switzerland",
+    "Luxembourg",
+    "Netherlands",
+    "Belgium",
+    "United Kingdom",
+    "Ireland",
+    "France",
+    "Spain"
 ]
 
 geojson = geopandas.read_file(url)
