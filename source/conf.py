@@ -19,6 +19,8 @@ html_css_files = [
     "css/custom.css"
 ]
 
+html_sourcelink_suffix = ""
+
 html_theme_options = {
     "navbar_start": ["navbar-logo"],
     "navbar_center": ["empty-space"],
