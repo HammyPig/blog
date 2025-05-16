@@ -139,3 +139,28 @@ geojson = geopandas.read_file(url)
 
 plot_map(geojson, highlighted_locations, locations_column_name)
 ```
+
+## United States
+
+```{code-cell} ipython3
+:tags: [remove-input]
+
+url = "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/refs/heads/master/data/geojson/us-states.json"
+highlighted_locations = [
+    "Ohio",
+    "Illinois"
+]
+locations_column_name = "name"
+
+geojson = geopandas.read_file(url)
+
+# Remove non-mainland states
+removed_regions = ["Alaska", "Hawaii", "Puerto Rico"]
+geojson = geojson[~geojson[locations_column_name].isin(removed_regions)]
+    
+plot_map(geojson, highlighted_locations, locations_column_name)
+```
+
+```{code-cell} ipython3
+
+```
