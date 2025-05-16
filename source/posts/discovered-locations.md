@@ -97,7 +97,7 @@ geojson = geopandas.read_file(url)
 geojson = geojson.to_crs("EPSG:3035") # Set map projection (https://epsg.io/3035).
 
 # Remove regions not part of Europe (https://en.wikipedia.org/wiki/Europe#List_of_states_and_territories)
-removed_regions = ["Azerbaijan", "Cyprus", "Georgia", "Israel", "Turkey"]
+removed_regions = ["Azerbaijan", "Armenia", "Cyprus", "Georgia", "Israel", "Turkey"]
 geojson = geojson[~geojson[locations_column_name].isin(removed_regions)]
 
 plot_map(geojson, highlighted_locations, locations_column_name)
