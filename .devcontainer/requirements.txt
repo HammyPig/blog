@@ -4,11 +4,10 @@ pydata-sphinx-theme == 0.*
 sphinx-design == 0.*
 sphinx-copybutton == 0.*
 sphinx-autobuild
-python-frontmatter
-jupyterlab
-jupytext
+python-frontmatter == 1.*
+jupyterlab == 4.*
+jupytext == 1.*
 numpy
-scipy
 pandas
 matplotlib
 plotly
@@ -16,3 +15,4 @@ unidecode
 openpyxl
 geopandas
 scikit-learn
+yfinance
