@@ -16,3 +16,4 @@ openpyxl
 geopandas
 scikit-learn
 yfinance
+pandas_datareader
