@@ -1,4 +1,6 @@
 ---
+icon: "{fas}`money-bill`"
+date: "2025-07-29"
 jupytext:
   formats: md:myst
   text_representation:
@@ -124,7 +126,7 @@ def plot_correlation(df, actual, predicted, actual_label, predicted_label):
     plt.show()
 ```
 
-## Downloading and Preparing Data
+## Downloading and preparing the data
 
 ```{code-cell} ipython3
 :tags: [remove-output]
@@ -224,7 +226,7 @@ We can see that our assumptions were correct. No significant change in correlati
 
 +++
 
-## Model C: Substituting Older ETFs
+## Model C: Substituting Components with Older ETFs
 
 +++
 
@@ -269,7 +271,7 @@ plot_correlation(df, "VDAL.AX", "model_c", "Actual", "Model C")
 
 Model C's correlation remains strong to the original despite the more drastic changes.
 
-## Model D: Substituting Older US-based ETFs
+## Model D: Substituting Components with Older US-based ETFs
 
 In model C, we dealt only with ETFs available on the Australian exchange. But by extending our search to international exchanges such as the US, we can find even more data.
 
@@ -327,7 +329,7 @@ set_offset_from_first_valid_index(df, "model_e", -1, 1)
 plot_correlation(df, "VDAL.AX", "model_e", "Actual", "Model E")
 ```
 
-## Model F: Substituting International Shares for the SP500
+## Model F: Substituting International Shares with the SP500
 
 +++
 
@@ -453,8 +455,4 @@ ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{100 * (x - 1):.
 fig.autofmt_xdate()
 
 plt.show()
-```
-
-```{code-cell} ipython3
-
 ```
