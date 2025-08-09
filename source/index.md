@@ -5,17 +5,15 @@ html_theme.sidebar_secondary.remove: true
 
 # Home
 
-Hello and welcome to my website!
+Hello and welcome to my website! I created this after the realisation of two things:
 
-I created this website after the realisation of two things:
-
-1. Storing knowledge is easier than rediscovering it from scratch.
+1. Storing and reusing knowledge is easier than rediscovering it from scratch.
 1. It is hard to go alone in this world.
 
-To create a central hub which records the best of my knowledge is useful as it then provides the following solutions:
+With this in mind, a website allows me to:
 
-1. I can always relearn things which I have forgotten.
-1. Having it accessible to others means that we can each learn from each other in our common quest of improving our lives.
+- Store and continuously iterate on the best of my knowledge.
+- Easily share ideas with others, where we can all then learn from each other in our common quest to improve our lives.
 
 With all that being said, please feel free to browse my posts found below. Thank you for visiting :)
 
