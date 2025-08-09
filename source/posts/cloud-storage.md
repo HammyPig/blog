@@ -3,7 +3,7 @@ icon: "{fas}`cloud`"
 date: "2025-08-09"
 ---
 
-# Using Rclone and Backblaze B2 for Reliable Encrypted Cloud Storage
+# Robust Encrypted Cloud Storage Using Rclone and Backblaze B2
 
 ## Prelude
 
