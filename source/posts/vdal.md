@@ -48,6 +48,9 @@ import matplotlib.patches as patches
 import matplotlib.colors as mcolors
 import yfinance as yf
 from sklearn.metrics import r2_score
+from sklearn.linear_model import LinearRegression
+from matplotlib.ticker import LogLocator, FuncFormatter
+from matplotlib.ticker import ScalarFormatter
 ```
 
 ### Configurations
@@ -66,25 +69,31 @@ def set_offset_from_first_valid_index(df, col, offset, y):
 ```
 
 ```{code-cell} ipython3
-def normalise_stock_performance(df, rebase_stock=None):
-    df = df.copy()
-    
-    for stock in df.columns:
-        # convert to relative cumulative product
-        df[stock] = df[stock].pct_change(fill_method=None)
-        df[stock] = (df[stock] + 1).cumprod()
-    
-        # set initial value of cumulative product to 1
-        set_offset_from_first_valid_index(df, stock, -1, 1)
+def normalised(x):
+    x = x.ffill().dropna().pct_change(fill_method=None)
+    x = (1 + x).cumprod()
+    x.iloc[0] = 1
 
-    # get rebase date
+    return x
+```
+
+```{code-cell} ipython3
+def normalise_stock_performance(df, rebase_stock=None):
+    # default to youngest stock
     if rebase_stock == None:
-         # default to earliest common date
-        rebase_date = df.apply(lambda x: x.first_valid_index()).sort_values(ascending=False).iloc[0]
-    else:
-        rebase_date = df[rebase_stock].first_valid_index()
+        rebase_stock = (
+            df.apply(lambda x: x.first_valid_index())
+            .sort_values(ascending=False).index[0]
+        )
         
-    # scale from rebase date
+    df = df.copy()
+
+    # normalise each column individually
+    for stock in df.columns:
+        df[stock] = normalised(df[stock])
+        
+    # scale stocks relatively
+    rebase_date = df[rebase_stock].first_valid_index()
     for stock in df.columns:
         rebase_value = df[stock].loc[rebase_date]
         df[stock] = df[stock] / rebase_value
@@ -93,18 +102,32 @@ def normalise_stock_performance(df, rebase_stock=None):
 ```
 
 ```{code-cell} ipython3
-def plot_correlation(df, actual, predicted, actual_label, predicted_label):
+def plot_correlation(df, actual, predicted, actual_label=None, predicted_label=None):
+    if actual_label == None:
+        actual_label = actual
+
+    if predicted_label == None:
+        predicted_label = predicted
+        
     plot_df = df[[actual, predicted]]
     plot_df = plot_df.dropna()
     plot_df = normalise_stock_performance(plot_df)
-
-    y = (plot_df.pct_change(fill_method=None) + 1).dropna()
-    y = y.rolling(30).apply(lambda x: x.prod()).dropna()
-    y -= 1
     
-    y_true = y[actual]
-    y_pred = y[predicted]
+    y1 = (plot_df.pct_change(fill_method=None) + 1).dropna()
+    y1 = y1.rolling(30).apply(lambda x: x.prod()).dropna()
+    y1 -= 1
+    y_true = y1[actual]
+    y_pred = y1[predicted]
     r2 = r2_score(y_true, y_pred)
+
+    x2 = np.array(y_true).reshape(-1, 1)
+    y2 = np.array(y_pred)
+    model = LinearRegression()
+    model.fit(x2, y2)
+    x_fit = np.linspace(x2.min(), x2.max(), 100).reshape(-1, 1)
+    y_fit = model.predict(x_fit)
+    slope = model.coef_[0]
+    intercept = model.intercept_
 
     fig, axs = plt.subplots(1, 2, figsize=(8, 3))
     
@@ -112,11 +135,13 @@ def plot_correlation(df, actual, predicted, actual_label, predicted_label):
     axs[0].plot(plot_df[predicted])
     axs[0].set_title("Total Return (%)")
     axs[0].legend([actual_label, predicted_label])
-    axs[0].yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{100 * (x - 1):.0f}%"))
+    axs[0].yaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{100 * (x - 1):.0f}%"))
     
     axs[1].plot([y_true.min(), y_true.max()], [y_true.min(), y_true.max()])
+    axs[1].plot(x_fit, y_fit)
     axs[1].scatter(y_true, y_pred, s=1, color=mcolors.TABLEAU_COLORS["tab:orange"], zorder=2)
     axs[1].text(0.1, 0.9, f"R2: {r2:.2f}", transform=axs[1].transAxes)
+    axs[1].text(0.1, 0.8, f"y = {slope:.2f}x + {intercept:.2f}", transform=axs[1].transAxes)
     axs[1].set_title(f"30-Day Returns: {actual_label} vs. {predicted_label}")
     axs[1].xaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{100 * x:.0f}%"))
     axs[1].yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{100 * x:.0f}%"))
