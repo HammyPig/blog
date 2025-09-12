@@ -21,7 +21,7 @@ With all that being said, please feel free to browse my posts found below. Thank
 
 :::{post-grid}
 :sort: newest
-:tags: notes
+:tags: ["notes"]
 :::
 
 ## All Posts
