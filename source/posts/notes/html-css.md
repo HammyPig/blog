@@ -2,7 +2,7 @@
 icon: "{fab}`html5`"
 date: "2025-09-12"
 desc: "Building a modern and responsive webpage layout with a modular approach."
-tags: "notes"
+tags: ["notes"]
 ---
 
 # HTML/CSS Notes
