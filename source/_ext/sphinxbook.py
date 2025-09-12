@@ -70,9 +70,11 @@ class PostGridDirective(GridDirective):
         if not os.path.isdir(file_path):
             return False
         
-        md_files = [f for f in os.listdir(file_path) if f.endswith(".md")]
-
-        return len(md_files) == 1
+        for f in os.listdir(file_path):
+            if f.endswith(".md"):
+                return True
+            
+        return False
     
     def add_post_metadata_to_grid(self, post_metadata):
         display_title = post_metadata.title
@@ -120,6 +122,26 @@ class PostGridDirective(GridDirective):
             if file_name.endswith(".md"):
                 file_path = os.path.join(folder_path, file_name)
                 return self.get_post_metadata(file_path)
+            
+    def add_post_metadata_from_folder(self, folder_path):
+        post_metadata_list = []
+
+        for file in os.listdir(folder_path):
+            file_path = os.path.join(folder_path, file)
+
+            if PostGridDirective.is_post(file_path):
+                post_metadata = self.get_post_metadata(file_path)
+            elif PostGridDirective.is_section_folder(file_path):
+                post_metadata = self.get_section_metadata(file_path)
+            elif PostGridDirective.is_post_folder(file_path):
+                post_metadata_list += self.add_post_metadata_from_folder(file_path)
+                continue
+            else:
+                continue
+
+            post_metadata_list.append(post_metadata)
+
+        return post_metadata_list
     
     def run(self):
         # get directive options
@@ -153,21 +175,7 @@ class PostGridDirective(GridDirective):
         # get all post metadata
         source_dir = self.state.document.settings.env.srcdir
         posts_dir = os.path.join(source_dir, "posts/")
-        post_metadata_list = []
-
-        for file in os.listdir(posts_dir):
-            file_path = os.path.join(posts_dir, file)
-
-            if PostGridDirective.is_post(file_path):
-                post_metadata = self.get_post_metadata(file_path)
-            elif PostGridDirective.is_section_folder(file_path):
-                post_metadata = self.get_section_metadata(file_path)
-            elif PostGridDirective.is_post_folder(file_path):
-                post_metadata = self.get_post_folder_metadata(file_path)
-            else:
-                continue
-
-            post_metadata_list.append(post_metadata)
+        post_metadata_list = self.add_post_metadata_from_folder(posts_dir)
 
         # sort post metadata
         if self.sort_by != None:
