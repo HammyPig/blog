@@ -17,7 +17,14 @@ With this in mind, a website allows me to:
 
 With all that being said, please feel free to browse my posts found below. Thank you for visiting :)
 
-## Posts
+## Notes
+
+:::{post-grid}
+:sort: newest
+:tags: notes
+:::
+
+## All Posts
 
 :::{post-grid}
 :sort: newest
