@@ -1,5 +1,6 @@
 import os
 import re
+import yaml
 from datetime import datetime
 import frontmatter
 from docutils.parsers.rst import directives
@@ -148,7 +149,8 @@ class PostGridDirective(GridDirective):
         if "tags" not in self.options:
             self.tags_filter = []
         else:
-            self.tags_filter = [x.strip() for x in self.options["tags"]]
+            self.tags_filter = yaml.safe_load(self.options["tags"])
+            self.tags_filter = [x.strip() for x in self.tags_filter]
 
         if "sort" not in self.options:
             self.sort_by = None
